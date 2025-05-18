@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Jeu du Président</title>
+<link rel="stylesheet" href="president.css" />
+</head>
+<body>
+
+<h1>Jeu du Président</h1>
+
+<div id="setupScreen">
+  <label>Nombre de joueurs (2-5) : 
+    <input type="number" id="numPlayers" min="2" max="5" value="3" />
+  </label>
+  <button onclick="startGame()">Démarrer</button>
+</div>
+
+<div id="waitScreen">
+  <p>Au tour de <span id="playerName"></span>. Clique pour commencer ton tour.</p>
+  <button onclick="startTurn()">Jouer</button>
+</div>
+
+<div id="game">
+  <p><strong>Joueur :</strong> <span id="currentPlayer"></span></p>
+  <div id="pile">Tas : Aucun</div>
+  <div id="hand"></div>
+  <button onclick="playSelectedCards()">Jouer les cartes</button>
+  <button onclick="passTurn()">Passer</button>
+  <p id="info"></p>
+</div>
+
+<script src="president.js"></script>
+
+</body>
+</html>
