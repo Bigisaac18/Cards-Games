@@ -6,7 +6,7 @@ let pileType = null;
 let currentPlayerIndex = 0;
 let selectedCards = [];
 
-let lastPairRank = null; // pour règle "ou rien"
+let lastPairRank = null; // Pour règle "ou rien"
 let consecutivePairsCount = 0;
 
 let ranking = [];

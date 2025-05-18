@@ -58,7 +58,7 @@ function bataille(player1Deck, player2Deck, cardsInPlay) {
     const cardsNeeded = 4;
 
     if (player1Deck.length < cardsNeeded || player2Deck.length < cardsNeeded) {
-        // Si un joueur n'a pas assez de cartes, il perd la bataille (ou la partie)
+        // Si un joueur n'a pas assez de cartes, il perd la bataille
         if (player1Deck.length < cardsNeeded && player2Deck.length < cardsNeeded) {
             statusDiv.textContent = "Match nul, pas assez de cartes pour continuer la bataille.";
             playBtn.disabled = true;
@@ -90,7 +90,7 @@ function bataille(player1Deck, player2Deck, cardsInPlay) {
     player2CardDiv.textContent += ` | ${p2FaceUp.value} ${p2FaceUp.symbol}`;
 
     if (p1FaceUp.rank > p2FaceUp.rank) {
-        player1Score += cardsInPlay.length; // par exemple, on ajoute le nombre de cartes gagnées
+        player1Score += cardsInPlay.length; // Par exemple, on ajoute le nombre de cartes gagnées
         player1Deck.push(...cardsInPlay);
         statusDiv.textContent = `🔥 Vous gagnez la bataille ! +${cardsInPlay.length} cartes`;
         return 'player1';
